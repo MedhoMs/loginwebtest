@@ -20,7 +20,7 @@ Test page to create an account and login, send data to the MYSQL database using 
 1. Start the Apache server and MySQL in the XAMPP control panel.
 2. Access phpmyadmin.
 3. Open `CMD` and run the command `npm run dev` in the project path.
-4. Open a new `CMD` and run the command `php artisan serve` and access the URL http://127.0.0.1:8000.
+4. Open a new `CMD` and run the command `php artisan serve` and access the URL http://127.0.0.1:8000
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
