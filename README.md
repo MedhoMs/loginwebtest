@@ -6,7 +6,7 @@ Web de prueba para realizar una creación de cuenta y inicio de sesión, enviar 
 
 ### Cómo iniciarlo
 
-#### 1. Inicia en el control de XAMPP el servidor Apache y MYSQL   
+1. Inicia en el control de XAMPP el servidor Apache y MYSQL   
 #### 2. Acceder a phpmyadmin  
 #### 3. Abrir `CMD` e iniciar el comando `npm run dev` en la ruta del proyecto  
 #### 4. Abrir un nuevo `CMD` e iniciar el comando `php artisan serve` y acceder a la URL http://127.0.0.1:8000
