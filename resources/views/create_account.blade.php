@@ -10,19 +10,19 @@
 
         <div class="fixed w-full flex justify-end gap-4 p-3 font-coolvetica">
             <div id="spanish_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-                <img src="{{ asset('img/flags/spanish_flag.webp') }}" alt="Spanish" class="w-24 h-16 object-cover">
+                <img src="{{ asset('img/flags/spanish_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
                 <p id="spanish_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
             </div>
 
             <div id="english_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-                <img src="{{ asset('img/flags/uk_flag.webp') }}" alt="Spanish" class="w-24 h-16 object-cover">
+                <img src="{{ asset('img/flags/uk_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
                 <p id="english_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
             </div>
         </div>
 
         <main class="flex flex-col justify-center items-center h-screen text-black font-coolvetica">
             <div class="p-12 rounded-xl shadow-[-7px_7px_7px_0px_rgba(0,_0,_0,_0.1)] bg-gray-200/40">
-                <form method="POST" action="/register" class="flex flex-col">
+                <form method="POST" action="/register" class="flex flex-col" id="loginForm">
                     @csrf
                     <h1 id="title" class="text-3xl text-center pb-4"></h1>
 
@@ -31,6 +31,8 @@
 
                     <label for="password" id="form_password" class="py-2 text-xl"></label>
                     <input type="password" name="password" required class="border-2 border-transparent bg-white bg-opacity-20 rounded-md p-1 focus:outline-none">
+
+                    <p id="errorMessage" class="text-red-600 text-center py-2 hidden">Por favor, completa todos los campos.</p>
 
                     <div class="text-gray-500 text-sm pt-5">
                         <button type="submit" class="w-full text-lg bg-gradient-to-tr from-yellow-400 to-red-500 shadow-[-7px_7px_7px_0px_rgba(0,_0,_0,_0.1)] rounded-xl p-1 transition-colors duration-300 hover:text-gray-800">

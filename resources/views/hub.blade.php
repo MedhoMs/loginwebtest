@@ -10,12 +10,12 @@
 
         <div class="fixed w-full flex justify-end gap-4 p-3 font-coolvetica">
             <div id="spanish_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-                <img src="{{ asset('img/flags/spanish_flag.webp') }}" alt="Spanish" class="w-24 h-16 object-cover">
+                <img src="{{ asset('img/flags/spanish_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
                 <p id="spanish_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
             </div>
 
             <div id="english_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-                <img src="{{ asset('img/flags/uk_flag.webp') }}" alt="Spanish" class="w-24 h-16 object-cover">
+                <img src="{{ asset('img/flags/uk_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
                 <p id="english_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
             </div>
         </div>

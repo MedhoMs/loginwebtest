@@ -23,6 +23,6 @@ class UserController extends Controller
             'updated_at' => now(),
         ]);
 
-        return redirect('/')->with('success', 'Cuenta creada exitosamente');
+        return redirect('/sign_in')->with('success', 'Cuenta creada exitosamente');
     }
 }
