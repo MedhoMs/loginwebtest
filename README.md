@@ -1,3 +1,27 @@
+# About The Project/Sobre El Proyecto
+
+## Español
+
+Web de prueba para realizar una creación de cuenta y inicio de sesión, enviar datos a la base de datos MYSQL usando phpmyadmin y XAMPP.
+
+### Cómo iniciarlo
+
+1. Inicia en el panel de control de XAMPP el servidor Apache y MYSQL   
+2. Acceder a phpmyadmin  
+3. Abrir `CMD` e iniciar el comando `npm run dev` en la ruta del proyecto  
+4. Abrir un nuevo `CMD` e iniciar el comando `php artisan serve` y acceder a la URL http://127.0.0.1:8000
+
+## English
+
+Test page to create an account and login, send data to the MYSQL database using phpmyadmin and XAMPP.
+
+### Cómo iniciarlo
+
+1. Start the Apache server and MySQL in the XAMPP control panel.
+2. Access phpmyadmin.
+3. Open `CMD` and run the command `npm run dev` in the project path.
+4. Open a new `CMD` and run the command `php artisan serve` and access the URL http://127.0.0.1:8000
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
