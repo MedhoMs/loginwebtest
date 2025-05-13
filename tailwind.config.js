@@ -8,9 +8,13 @@ export default {
       extend: {
         fontFamily: {
           coolvetica: ['Coolvetica', 'sans-serif'],
-          sansation: ['Sansation', 'sans-serif'], 
+          sansation: ['Sansation', 'sans-serif'],
         },
+        colors: {
+            'azul1': '#424874',
+            'azul2': '#A6B1E1',
       },
     },
     plugins: [],
-  }
+  },
+};

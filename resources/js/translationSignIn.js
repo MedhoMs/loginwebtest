@@ -1,5 +1,7 @@
 export const translationSignIn = {
     spanish: {
+        window_title: "Inicia sesión",
+        nav_title: "Incia sesión, ¡No seas tímido!",
         spanish_selector: "Español",
         english_selector: "Inglés",
         title: "Iniciar sesión",
@@ -11,6 +13,8 @@ export const translationSignIn = {
         password_placeholder: "Introduce tu contraseña"
       },
       english: {
+        window_title: "Sign in",
+        nav_title: "Sign in, don't be shy!",
         spanish_selector: "Spanish",
         english_selector: "English",
         title: "Sign in",

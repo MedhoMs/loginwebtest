@@ -2,20 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Sign In</title>
+    <title id="window_title"></title>
     @vite(['resources/css/app.css', 'resources/js/signInSwitcher.js'])
 </head>
-    <body class="bg-gradient-to-tr from-yellow-400 to-red-500">
+    <body style="background: linear-gradient(to bottom left, #7ABFFF, #97D8FF)">
 
-        <div class="fixed w-full flex justify-end gap-4 p-3 font-coolvetica">
-            <div id="spanish_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-                <img src="{{ asset('img/flags/spanish_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
-                <p id="spanish_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
-            </div>
+        <div class="fixed w-full flex justify-between gap-4 p-3 font-coolvetica bg-[#c5f3ff] shadow-[-1px_7px_5px_0px_rgba(0,_0,_0,_0.1)]">
 
-            <div id="english_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-                <img src="{{ asset('img/flags/uk_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
-                <p id="english_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
+            <div class="w-[160px]"></div>
+
+            <h1 id="nav_title" class="text-4xl self-center font-bold text-center grow"></h1>
+
+            <div class="flex gap-4">
+                <div id="spanish_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
+                    <img src="{{ asset('img/flags/spanish_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
+                    <p id="spanish_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
+                </div>
+
+                <div id="english_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
+                    <img src="{{ asset('img/flags/uk_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
+                    <p id="english_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
+                </div>
             </div>
         </div>
 
@@ -32,7 +39,7 @@
                     <input type="password" name="password" required class="border-2 border-transparent bg-white bg-opacity-20 rounded-md p-1 focus:outline-none">
 
                     <div class="text-gray-500 text-sm pt-5">
-                        <button type="submit" class="w-full text-lg bg-gradient-to-tr from-yellow-400 to-red-500 shadow-[-7px_7px_7px_0px_rgba(0,_0,_0,_0.1)] rounded-xl p-1 transition-colors duration-300 hover:text-gray-800">
+                        <button type="submit" class="w-full text-lg shadow-[-7px_7px_7px_0px_rgba(0,_0,_0,_0.1)] rounded-xl p-1 transition-colors duration-300 hover:text-gray-800" style="background: linear-gradient(to bottom left, #7ABFFF, #97D8FF)">
                             <span id="submit"></span>
                         </button>
                     </div>
