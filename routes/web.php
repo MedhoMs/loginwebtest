@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ElectrodomesticosImages;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,5 +49,11 @@ Route::post('/login', function (Request $request) {
 });
 
 Route::get('/hub', function () {
-    return view('hub'); 
+    return view('hub');
 });
+
+Route::get('/electrodomesticos', function () {
+    return view('hub');
+});
+
+Route::get('/electrodomesticos', [ElectrodomesticosImages::class, 'electrodomestico']);

@@ -13,6 +13,9 @@ function updateTexts() {
     const t = translationHub[lang]
 
     document.getElementById('window_title').textContent = t.window_title
+    document.getElementById('nav_title').textContent = t.nav_title
+    document.getElementById('spanish_selector').textContent = t.spanish_selector
+    document.getElementById('english_selector').textContent = t.english_selector
     }
 
 // Ejecutar al cargar

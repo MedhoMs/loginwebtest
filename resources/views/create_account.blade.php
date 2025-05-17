@@ -1,59 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title id="window_title"></title>
-    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    @vite(['resources/css/app.css', 'resources/js/createSwitcher.js'])
-</head>
-    <body style="background: linear-gradient(to bottom left, #7ABFFF, #97D8FF)">
+@extends('layouts/login_nav')
 
-        <div class="fixed w-full flex justify-between gap-4 p-3 font-coolvetica bg-[#c5f3ff] shadow-[-1px_7px_5px_0px_rgba(0,_0,_0,_0.1)]">
+@section('content')
+@vite(['resources/css/app.css', 'resources/js/createSwitcher.js'])
+<main class="flex flex-col justify-center items-center pt-[11%] text-black font-coolvetica">
+    <div class="p-12 rounded-xl shadow-[-7px_7px_7px_0px_rgba(0,_0,_0,_0.1)] bg-gray-200/40">
+        <form method="POST" action="/register" class="flex flex-col" id="loginForm">
+            @csrf
+            <h1 id="title" class="text-3xl text-center pb-4"></h1>
 
-            <div class="w-[160px]"></div>
+            <label for="name" id="form_name" class="py-2 text-xl"></label>
+            <input type="text" name="name" required class="border-2 border-transparent bg-white bg-opacity-30 rounded-md p-1 focus:outline-none">
 
-            <h1 id="nav_title" class="text-4xl self-center font-bold text-center grow"></h1>
+            <label for="password" id="form_password" class="py-2 text-xl"></label>
+            <input type="password" name="password" required class="border-2 border-transparent bg-white bg-opacity-20 rounded-md p-1 focus:outline-none">
 
-            <div class="flex gap-4">
-                <div id="spanish_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-                    <img src="{{ asset('img/flags/spanish_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
-                    <p id="spanish_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
-                </div>
+            <p id="errorMessage" class="text-red-600 text-center py-2 hidden">Por favor, completa todos los campos.</p>
 
-                <div id="english_flag" class="group flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-                    <img src="{{ asset('img/flags/uk_flag.webp') }}" alt="Spanish" class="w-18 h-11 object-cover">
-                    <p id="english_selector" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl"></p>
-                </div>
+            <div class="text-gray-500 text-sm pt-5">
+                <button type="submit" class="w-full text-lg shadow-[-7px_7px_7px_0px_rgba(0,_0,_0,_0.1)] rounded-xl p-1 transition-colors duration-300 hover:text-gray-800 cursor-pointer" style="background: linear-gradient(to bottom left, #7ABFFF, #97D8FF)">
+                    <span id="submit"></span>
+                </button>
             </div>
-        </div>
 
-        <main class="flex flex-col justify-center items-center h-screen text-black font-coolvetica">
-            <div class="p-12 rounded-xl shadow-[-7px_7px_7px_0px_rgba(0,_0,_0,_0.1)] bg-gray-200/40">
-                <form method="POST" action="/register" class="flex flex-col" id="loginForm">
-                    @csrf
-                    <h1 id="title" class="text-3xl text-center pb-4"></h1>
-
-                    <label for="name" id="form_name" class="py-2 text-xl"></label>
-                    <input type="text" name="name" required class="border-2 border-transparent bg-white bg-opacity-30 rounded-md p-1 focus:outline-none">
-
-                    <label for="password" id="form_password" class="py-2 text-xl"></label>
-                    <input type="password" name="password" required class="border-2 border-transparent bg-white bg-opacity-20 rounded-md p-1 focus:outline-none">
-
-                    <p id="errorMessage" class="text-red-600 text-center py-2 hidden">Por favor, completa todos los campos.</p>
-
-                    <div class="text-gray-500 text-sm pt-5">
-                        <button type="submit" class="w-full text-lg shadow-[-7px_7px_7px_0px_rgba(0,_0,_0,_0.1)] rounded-xl p-1 transition-colors duration-300 hover:text-gray-800 cursor-pointer" style="background: linear-gradient(to bottom left, #7ABFFF, #97D8FF)">
-                            <span id="submit"></span>
-                        </button>
-                    </div>
-
-                    <div class="text-gray-500 text-sm text-right pt-5">
-                        <a href="/sign_in">
-                            <span id="opposite_option" class="transition-colors duration-300 hover:text-gray-800 underline"></span> ->
-                        </a>
-                    </div>
-                </form>
+            <div class="text-gray-500 text-sm text-right pt-5">
+                <a href="/sign_in">
+                    <span id="opposite_option" class="transition-colors duration-300 hover:text-gray-800 underline"></span> ->
+                </a>
             </div>
-        </main>
-    </body>
-</html>
+        </form>
+    </div>
+</main>
+@endsection
