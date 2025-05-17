@@ -1,6 +1,6 @@
 export const translationSignIn = {
     spanish: {
-        window_title: "Inicia sesión",
+        window_title: "Electron",
         nav_title: "Incia sesión, ¡No seas tímido!",
         spanish_selector: "Español",
         english_selector: "Inglés",
@@ -11,9 +11,9 @@ export const translationSignIn = {
         submit: "Entrar",
         username_placeholder: "Introduce tu nombre",
         password_placeholder: "Introduce tu contraseña"
-      },
-      english: {
-        window_title: "Sign in",
+    },
+    english: {
+        window_title: "Electron",
         nav_title: "Sign in, don't be shy!",
         spanish_selector: "Spanish",
         english_selector: "English",
@@ -24,5 +24,5 @@ export const translationSignIn = {
         submit: "Enter",
         username_placeholder: "Enter your username",
         password_placeholder: "Enter your password"
-      }
     }
+}

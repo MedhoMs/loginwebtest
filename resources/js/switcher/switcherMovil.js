@@ -1,4 +1,4 @@
-import { translationHub } from "./translationHub"
+import { translationMovil } from "../translate/translationMovil"
 
 let currentLanguage = localStorage.getItem('language') || 'spanish'
 
@@ -10,7 +10,7 @@ function changeLanguage(lang) {
 
 function updateTexts() {
     const lang = currentLanguage
-    const t = translationHub[lang]
+    const t = translationMovil[lang]
 
     document.getElementById('window_title').textContent = t.window_title
     document.getElementById('nav_title').textContent = t.nav_title

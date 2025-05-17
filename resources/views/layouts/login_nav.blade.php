@@ -8,9 +8,9 @@
 </head>
     <!--bg-[#7ABFFF]-->
     <!--Quitar absolute y el h-screen, y poner pt al form-->
-    <body class="bg-[#7ABFFF]">
+    <body class="bg-[#3C3C3C] text-white">
 
-        <div class="w-full flex justify-between gap-4 p-3 font-coolvetica bg-[#B3F0FF] shadow-[-1px_7px_5px_0px_rgba(0,_0,_0,_0.1)]">
+        <div class="w-full flex justify-between gap-4 p-3 font-coolvetica bg-[#4D4D4D] shadow-[-1px_7px_5px_0px_rgba(0,_0,_0,_0.1)]">
 
             <div class="w-[160px]"></div>
 
@@ -32,7 +32,7 @@
         @yield('content')
 
         <svg class="absolute bottom-0 left-0 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#0099ff" fill-opacity="1" d="M0,64L40,85.3C80,107,160,149,240,165.3C320,181,400,171,480,181.3C560,192,640,224,720,213.3C800,203,880,149,960,154.7C1040,160,1120,224,1200,234.7C1280,245,1360,203,1400,181.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+            <path fill="#1E1E1E" fill-opacity="1" d="M0,64L40,85.3C80,107,160,149,240,165.3C320,181,400,171,480,181.3C560,192,640,224,720,213.3C800,203,880,149,960,154.7C1040,160,1120,224,1200,234.7C1280,245,1360,203,1400,181.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
         </svg>
     </body>
 </html>

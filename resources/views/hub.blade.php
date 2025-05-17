@@ -1,14 +1,13 @@
 @extends('layouts/sidebar')
 
+@vite(['resources/js/switcher/switcherHub.js'])
 @section('main')
-    <div class="grid grid-cols-4 grid-rows-4 gap-56 mx-auto max-w-5xl h-fit">
-        <div class="border border-purple-700 px-14"><img src="{{ asset('img/electrodomesticos/Frigorífico combi Bosch KGN36VLED.webp')}}" alt=""></div>
-        <div class="border border-purple-700 px-14">2</div>
-        <div class="border border-purple-700 px-14">3</div>
-        <div class="border border-purple-700 px-14">4</div>
-        <div class="border border-purple-700 px-14">1</div>
-        <div class="border border-purple-700 px-14">2</div>
-        <div class="border border-purple-700 px-14">3</div>
-        <div class="border border-purple-700 px-14">4</div>
+    <div class="grid lg:grid-cols-5 grid-cols-1 gap-20 w-fit mx-auto text-white">
+        @foreach ($productos as $producto)
+            <div class="flex flex-col bg-[#1E1E1E] w-[250px] cursor-pointer">
+                <img src="{{ asset($producto['image']) }}" class="border-b">
+                <p class="text-center bg-[#1E1E1E]">{{ $producto['nombre'] }}</p>
+            </div>
+        @endforeach
     </div>
 @endsection

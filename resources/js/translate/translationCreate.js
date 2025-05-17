@@ -1,6 +1,6 @@
 export const translationCreate = {
     spanish: {
-        window_title: "Crea una cuenta",
+        window_title: "Electron",
         nav_title: "Create una cuenta, ¡No seas tímido!",
         spanish_selector: "Español",
         english_selector: "Inglés",
@@ -13,7 +13,7 @@ export const translationCreate = {
         password_placeholder: "Introduce tu contraseña"
     },
     english: {
-        window_title: "Create an account",
+        window_title: "Electron",
         nav_title: "Create an account, don't be shy!",
         spanish_selector: "Spanish",
         english_selector: "English",

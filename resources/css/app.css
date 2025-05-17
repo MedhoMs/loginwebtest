@@ -7,3 +7,18 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/*Animacion para que el icon rote de 0deg-(-10deg)-10deg-0deg, haga una pausa, y lo repita de nuevo*/
+@layer utilities {
+  @keyframes wiggle-hover {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .hover\:wiggle:hover {
+    animation: wiggle-hover 0.7s ease-in-out infinite;
+    animation-delay: 0.1s;
+  }
+}

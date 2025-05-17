@@ -40,6 +40,12 @@ class ElectrodomesticosImages extends Controller
             ],
 
             [
+            'image' => 'img/electrodomesticos/Lavavajillas Beko BDFN05330X.webp',
+            'nombre' => 'Lavavajillas Beko BDFN05330X',
+            'precio' => ''
+            ],
+
+            [
             'image' => 'img/electrodomesticos/Microondas LG MH6535GDH.webp',
             'nombre' => 'Microondas LG MH6535GDH',
             'precio' => ''
@@ -50,30 +56,14 @@ class ElectrodomesticosImages extends Controller
             'nombre' => 'Microondas Teka MWE 230 G',
             'precio' => ''
             ],
-
             [
-            'image' => 'img/electrodomesticos/Microondas Teka MWE 230 G.webp',
-            'nombre' => 'Microondas Teka MWE 230 G',
+            'image' => 'img/electrodomesticos/Placa de inducción Teka MestrePaeller IZC 63632 MPT BK.webp',
+            'nombre' => 'Placa de inducción Teka MestrePaeller IZC 63632 MPT BK',
             'precio' => ''
             ],
             [
-            'image' => 'img/electrodomesticos/Microondas Teka MWE 230 G.webp',
-            'nombre' => 'Microondas Teka MWE 230 G',
-            'precio' => ''
-            ],
-            [
-            'image' => 'img/electrodomesticos/Microondas Teka MWE 230 G.webp',
-            'nombre' => 'Microondas Teka MWE 230 G',
-            'precio' => ''
-            ],
-            [
-            'image' => 'img/electrodomesticos/Microondas Teka MWE 230 G.webp',
-            'nombre' => 'Microondas Teka MWE 230 G',
-            'precio' => ''
-            ],
-            [
-            'image' => 'img/electrodomesticos/Microondas Teka MWE 230 G.webp',
-            'nombre' => 'Microondas Teka MWE 230 G',
+            'image' => 'img/electrodomesticos/Placa vitrocerámica Balay 3EB715LR.webp',
+            'nombre' => 'Placa vitrocerámica Balay 3EB715LR',
             'precio' => ''
             ],
         ];

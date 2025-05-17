@@ -6,6 +6,10 @@ use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ElectrodomesticosImages;
+use App\Http\Controllers\MovilesImages;
+use App\Http\Controllers\PortatilesImages;
+use App\Http\Controllers\OrdenadoresImages;
+use App\Http\Controllers\MixHubImages;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +24,7 @@ use App\Http\Controllers\ElectrodomesticosImages;
 
 //Route::get('/', [DashboardController::class, 'index']);
 
-Route::get('/', function () {
+Route::get('/create_account', function () {
     return view('create_account');
 });
 
@@ -40,7 +44,7 @@ Route::post('/login', function (Request $request) {
         // Puedes guardar datos en la sesión si lo deseas
         session(['user_id' => $user->id]);
 
-        return redirect('/hub');
+        return redirect('/');
     } else {
         return redirect()->back()->withErrors([
             'login' => 'Usuario o contraseña incorrectos.',
@@ -48,12 +52,32 @@ Route::post('/login', function (Request $request) {
     }
 });
 
-Route::get('/hub', function () {
+Route::get('/', function () {
     return view('hub');
 });
 
 Route::get('/electrodomesticos', function () {
-    return view('hub');
+    return view('electrodomesticos');
 });
 
 Route::get('/electrodomesticos', [ElectrodomesticosImages::class, 'electrodomestico']);
+
+Route::get('/moviles', function () {
+    return view('moviles');
+});
+
+Route::get('/moviles', [MovilesImages::class, 'movil']);
+
+Route::get('/portatiles', function () {
+    return view('portatiles');
+});
+
+Route::get('/portatiles', [PortatilesImages::class, 'portatil']);
+
+Route::get('/ordenadores', function () {
+    return view('ordenadores');
+});
+
+Route::get('/ordenadores', [OrdenadoresImages::class, 'ordenador']);
+
+Route::get('/', [MixHubImages::class, 'mostrarProductos']);
