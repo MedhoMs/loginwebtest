@@ -5,11 +5,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\ElectrodomesticosImages;
-use App\Http\Controllers\MovilesImages;
-use App\Http\Controllers\PortatilesImages;
-use App\Http\Controllers\OrdenadoresImages;
-use App\Http\Controllers\MixHubImages;
+use App\Http\Controllers\ImagesController\ElectrodomesticosImages;
+use App\Http\Controllers\ImagesController\MovilesImages;
+use App\Http\Controllers\ImagesController\PortatilesImages;
+use App\Http\Controllers\ImagesController\OrdenadoresImages;
+use App\Http\Controllers\ImagesController\MixHubImages;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,36 +24,38 @@ use App\Http\Controllers\MixHubImages;
 
 //Route::get('/', [DashboardController::class, 'index']);
 
-Route::get('/create_account', function () {
-    return view('create_account');
+Route::get('/authentication/create_account', function () {
+    return view('authentication.create_account');
 });
 
-Route::get('/sign_in', function () {
-    return view('sign_in');
+Route::get('/authentication/sign_in', function () {
+    return view('authentication.sign_in');
 });
 
 Route::post('/register', [UserController::class, 'store']);
 
 Route::post('/login', function (Request $request) {
-    $username = $request->input('name');
+    $email = $request->input('email');
     $password = $request->input('password');
 
-    $user = DB::table('users')->where('id', $username)->first();
+    $user = DB::table('users')->where('email', $email)->first();
 
     if ($user && $user->password === $password) {
-        // Puedes guardar datos en la sesión si lo deseas
-        session(['user_id' => $user->id]);
-
+        session(['user_email' => $user->email]);
         return redirect('/');
     } else {
         return redirect()->back()->withErrors([
-            'login' => 'Usuario o contraseña incorrectos.',
+            'login' => 'Email o contraseña incorrectos.',
         ]);
     }
 });
 
 Route::get('/', function () {
     return view('hub');
+});
+
+Route::get('/authentication/set_username', function () {
+    return view('authentication.set_username');
 });
 
 Route::get('/electrodomesticos', function () {

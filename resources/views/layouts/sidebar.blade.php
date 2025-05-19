@@ -36,7 +36,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="self-center fixed opacity-0 -rotate-180 transform transition-all duration-300 group-hover:opacity-100 group-hover:rotate-0" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
                 <span class="transition-transform duration-300 group-hover:translate-x-6 ease-in-out" id="electrodomesticos"></span>
             </a>
-            <a href="/sign_in" class="flex group transition-colors duration-100 hover:text-red-600">
+            <a href="/authentication/sign_in" class="flex group transition-colors duration-100 hover:text-red-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="self-center fixed opacity-0 -rotate-180 transform transition-all duration-300 group-hover:opacity-100 group-hover:rotate-0" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
                 <span class="transition-transform duration-300 group-hover:translate-x-6" id="cerrar"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="self-center transition-transform duration-300 group-hover:translate-x-6" height="20px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg>

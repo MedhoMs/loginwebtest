@@ -5,12 +5,16 @@ export const translationCreate = {
         spanish_selector: "Español",
         english_selector: "Inglés",
         title: "Crear cuenta",
-        form_name: "Nombre de usuario",
+        second_title: "Usuario",
+        form_email: "Email",
         form_password: "Contraseña",
+        second_form_username: "Nombre de usuario",
         opposite_option: "Iniciar sesion",
+        continue: "Continuar",
         submit: "Crear",
-        username_placeholder: "Introduce tu nombre",
-        password_placeholder: "Introduce tu contraseña"
+        email_placeholder: "Introduce tu email",
+        password_placeholder: "Introduce tu contraseña",
+        username_placeholder: "Introduce tu usuario"
     },
     english: {
         window_title: "Electron",
@@ -18,11 +22,15 @@ export const translationCreate = {
         spanish_selector: "Spanish",
         english_selector: "English",
         title: "Create account",
-        form_name: "Username",
+        second_title: "User",
+        form_email: "Email",
         form_password: "Password",
+        second_form_username: "Username",
         opposite_option: "Sign in",
+        continue: "Continue",
         submit: "Create",
-        username_placeholder: "Enter your username",
-        password_placeholder: "Enter your password"
+        email_placeholder: "Enter your email",
+        password_placeholder: "Enter your password",
+        username_placeholder: "Enter your username"
     }
   }

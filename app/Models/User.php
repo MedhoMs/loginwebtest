@@ -12,16 +12,17 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'email';
     public $incrementing = false;
     protected $keyType = 'string';
+
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = ['id', 'password'];
+    protected $fillable = ['email', 'password', 'username'];
 
     /**
      * The attributes that should be hidden for serialization.

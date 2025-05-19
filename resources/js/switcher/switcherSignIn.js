@@ -17,13 +17,13 @@ function updateTexts() {
     document.getElementById('spanish_selector').textContent = t.spanish_selector
     document.getElementById('english_selector').textContent = t.english_selector
     document.getElementById('title').textContent = t.title
-    document.getElementById('form_name').textContent = t.form_name
+    document.getElementById('form_email').textContent = t.form_email
     document.getElementById('form_password').textContent = t.form_password
     document.getElementById('submit').textContent = t.submit
     document.getElementById('opposite_option').textContent = t.opposite_option
 
     const inputs = document.querySelectorAll('input')
-        inputs[1].placeholder = t.username_placeholder
+        inputs[1].placeholder = t.email_placeholder
         inputs[2].placeholder = t.password_placeholder
     }
 

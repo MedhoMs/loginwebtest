@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\ImagesController;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PortatilesImages extends Controller
 {

@@ -4,25 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
 {
     public function store(Request $request)
     {
-        // Valida los datos
-        $request->validate([
-            'name' => 'required|string|unique:users,id',
-            'password' => 'required|string|min:4',
-        ]);
+        try {
+            // Validación
+            $request->validate([
+                'email' => 'required|email|unique:users,email',
+                'password' => 'required|string|min:4',
+                'username' => 'required|string|unique:users,username',
+            ]);
 
-        // Inserta en la base de datos
-        DB::table('users')->insert([
-            'id' => $request->input('name'),
-            'password' => $request->input('password'), // encripta la contraseña con bcrypt()
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+            // Inserción
+            DB::table('users')->insert([
+                'email' => $request->input('email'),
+                'username' => $request->input('username'),
+                'password' => $request->input('password'), //Hash::make($request->input('password')), con esto encriptas la contraseña
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
 
-        return redirect('/sign_in')->with('success', 'Cuenta creada exitosamente');
+            return redirect('/')->with('success', 'Cuenta creada exitosamente');
+        } catch (ValidationException $e) {
+            return redirect('/authentication/create_account')
+                ->withErrors(['duplicate' => '!Ese email o nombre de usuario ya existe.¡'])
+                ->withInput();
+        }
     }
 }
